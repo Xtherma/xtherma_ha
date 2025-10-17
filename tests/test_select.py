@@ -31,6 +31,7 @@ async def test_set_select_rest(hass, init_integration):
     with pytest.raises(HomeAssistantError):
         await entity.async_select_option(entity.options[0])
 
+
 def _modbus_data_from_json():
     regs_list = load_modbus_regs_from_json("rest_response.json")
     return [
@@ -38,6 +39,7 @@ def _modbus_data_from_json():
         # ([...]),x
         # ([...]),
     ]
+
 
 @pytest.mark.parametrize(
     "mock_modbus_tcp_client",  # This refers to the fixture
@@ -53,8 +55,6 @@ async def test_set_select_modbus(hass, init_modbus_integration, mock_modbus_tcp_
     await entity.async_select_option(entity.options[0])
     kwargs = mock_modbus_tcp_client.write_register.call_args.kwargs
     # verify arguments passed to write_register()
-    assert kwargs['address'] == 1
-    assert kwargs['value'] == 0
-    assert kwargs['slave'] == 1
-
-
+    assert kwargs["address"] == 1
+    assert kwargs["value"] == 0
+    assert kwargs["slave"] == 1

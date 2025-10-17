@@ -6,7 +6,12 @@ import pytest
 from tests.helpers import load_mock_data
 
 VENDOR_DIR = os.path.join(
-    os.path.dirname(__file__), "..", "custom_components", "xtherma_fp", "vendor", "pymodbus"
+    os.path.dirname(__file__),
+    "..",
+    "custom_components",
+    "xtherma_fp",
+    "vendor",
+    "pymodbus",
 )
 print(os.path.abspath(VENDOR_DIR))
 sys.path.insert(0, os.path.abspath(VENDOR_DIR))
@@ -25,7 +30,15 @@ from custom_components.xtherma_fp.const import (
     FERNPORTAL_URL,
     VERSION,
 )
-from tests.const import MOCK_API_KEY, MOCK_CONFIG_ENTRY_ID, MOCK_MODBUS_ADDRESS, MOCK_MODBUS_HOST, MOCK_MODBUS_PORT, MOCK_SERIAL_NUMBER
+from tests.const import (
+    MOCK_API_KEY,
+    MOCK_CONFIG_ENTRY_ID,
+    MOCK_MODBUS_ADDRESS,
+    MOCK_MODBUS_HOST,
+    MOCK_MODBUS_PORT,
+    MOCK_SERIAL_NUMBER,
+)
+
 
 @pytest.fixture(autouse=True)
 def auto_enable_custom_integrations(enable_custom_integrations):
@@ -103,12 +116,15 @@ async def mock_modbus_tcp_client(request):
         mock_write_register_result = AsyncMock()
         mock_write_register_result.isError = Mock(return_value=False)
         mock_write_register_result.exception_code = 0
-        mock_instance.write_register = AsyncMock(return_value=mock_write_register_result)
+        mock_instance.write_register = AsyncMock(
+            return_value=mock_write_register_result
+        )
 
         # Mock the `close` method, as it might be called during component teardown or error handling.
         mock_instance.close = Mock(side_effect=close_side_effect)
 
         yield mock_instance
+
 
 @pytest.fixture
 async def init_modbus_integration(hass, mock_modbus_tcp_client) -> MockConfigEntry:
@@ -134,4 +150,3 @@ async def init_modbus_integration(hass, mock_modbus_tcp_client) -> MockConfigEnt
     await hass.async_block_till_done()
 
     return entry
-

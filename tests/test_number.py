@@ -8,9 +8,15 @@ from custom_components.xtherma_fp.xtherma_client_common import XthermaReadOnlyEr
 from tests.helpers import get_number_platform, load_rest_response
 from homeassistant.exceptions import HomeAssistantError
 
-NUMBER_ENTITY_ID_451 = "number.test_entry_xtherma_config_cooling_curve_2_outside_temperature_low_p1"
-NUMBER_ENTITY_ID_MODBUS_451 = "number.test_entry_xtherma_modbus_config_cooling_curve_2_outside_temperature_low_p1"
-NUMBER_ENTITY_ID_MODBUS_411 = "number.test_entry_xtherma_modbus_config_heating_curve_2_outside_temperature_low_p1"
+NUMBER_ENTITY_ID_451 = (
+    "number.test_entry_xtherma_config_cooling_curve_2_outside_temperature_low_p1"
+)
+NUMBER_ENTITY_ID_MODBUS_451 = (
+    "number.test_entry_xtherma_modbus_config_cooling_curve_2_outside_temperature_low_p1"
+)
+NUMBER_ENTITY_ID_MODBUS_411 = (
+    "number.test_entry_xtherma_modbus_config_heating_curve_2_outside_temperature_low_p1"
+)
 
 
 async def test_number_icon(hass, init_integration):
@@ -47,10 +53,11 @@ async def test_set_number_modbus(hass, init_modbus_integration, mock_modbus_tcp_
     await entity.async_set_native_value(entity.native_min_value)
     kwargs = mock_modbus_tcp_client.write_register.call_args.kwargs
     # verify arguments passed to write_register()
-    assert kwargs['address'] == 41
+    assert kwargs["address"] == 41
     assert entity.native_min_value == 16
-    assert kwargs['value'] == entity.native_min_value
-    assert kwargs['slave'] == 1
+    assert kwargs["value"] == entity.native_min_value
+    assert kwargs["slave"] == 1
+
 
 # check writing negative values as 2s complement
 @pytest.mark.parametrize(
@@ -58,7 +65,9 @@ async def test_set_number_modbus(hass, init_modbus_integration, mock_modbus_tcp_
     load_rest_response(),
     indirect=True,  # This tells pytest to pass the parameter to the fixture
 )
-async def test_set_negative_number_modbus(hass, init_modbus_integration, mock_modbus_tcp_client):
+async def test_set_negative_number_modbus(
+    hass, init_modbus_integration, mock_modbus_tcp_client
+):
     platform = get_number_platform(hass)
     state = hass.states.get(NUMBER_ENTITY_ID_MODBUS_411)
     entity = platform.entities.get(state.entity_id)
@@ -67,8 +76,7 @@ async def test_set_negative_number_modbus(hass, init_modbus_integration, mock_mo
     await entity.async_set_native_value(entity.native_min_value)
     kwargs = mock_modbus_tcp_client.write_register.call_args.kwargs
     # verify arguments passed to write_register()
-    assert kwargs['address'] == 31
+    assert kwargs["address"] == 31
     assert entity.native_min_value == -20
-    assert kwargs['value'] == (20 ^ 65535) + 1
-    assert kwargs['slave'] == 1
-
+    assert kwargs["value"] == (20 ^ 65535) + 1
+    assert kwargs["slave"] == 1

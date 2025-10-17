@@ -25,7 +25,9 @@ async def test_options_flow_rest_api_ok(hass, init_integration):
     assert entry.state is ConfigEntryState.LOADED
 
     result = await hass.config_entries.options.async_init(
-        entry.entry_id, context={"source": "test"}, data=None,
+        entry.entry_id,
+        context={"source": "test"},
+        data=None,
     )
     assert result["type"] == FlowResultType.FORM
 
@@ -43,13 +45,16 @@ async def test_options_flow_rest_api_ok(hass, init_integration):
 
     assert result["type"] is FlowResultType.CREATE_ENTRY
 
+
 async def test_options_flow_rest_api_change_to_modbus(hass, init_integration):
     """Test options flow."""
     entry = init_integration
     assert entry.state is ConfigEntryState.LOADED
 
     result = await hass.config_entries.options.async_init(
-        entry.entry_id, context={"source": "test"}, data=None,
+        entry.entry_id,
+        context={"source": "test"},
+        data=None,
     )
     assert result["type"] == FlowResultType.FORM
 

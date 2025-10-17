@@ -113,7 +113,6 @@ def verify_integration_selects(hass: HomeAssistant, entry: ConfigEntry):
 
 
 def verify_parameter_keys(hass: HomeAssistant, entry: ConfigEntry):
-
     entity_reg = er.async_get(hass)
     entries = er.async_entries_for_config_entry(entity_reg, entry.entry_id)
     for reg_entity in entries:
@@ -123,6 +122,7 @@ def verify_parameter_keys(hass: HomeAssistant, entry: ConfigEntry):
         assert entity is not None
         key = entity._attr_extra_state_attributes.get(EXTRA_STATE_ATTRIBUTE_PARAMETER)
         assert key == entity.entity_description.key
+
 
 async def test_async_setup_entry_restapi_ok(hass, aioclient_mock):
     """Verify config entries for REST API work."""

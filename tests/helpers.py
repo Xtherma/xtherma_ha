@@ -9,7 +9,13 @@ from homeassistant.util.json import (
 )
 from pytest import fail
 
-from custom_components.xtherma_fp.const import DOMAIN, KEY_ENTRY_KEY, KEY_ENTRY_VALUE, KEY_SETTINGS, KEY_TELEMETRY
+from custom_components.xtherma_fp.const import (
+    DOMAIN,
+    KEY_ENTRY_KEY,
+    KEY_ENTRY_VALUE,
+    KEY_SETTINGS,
+    KEY_TELEMETRY,
+)
 from pytest_homeassistant_custom_component.common import (
     load_json_value_fixture,
 )
@@ -52,6 +58,7 @@ def find_entry(values: list[dict], key: str) -> dict[str, Any] | None:
             return entry
     raise Exception(f"Key {key} not found")
 
+
 def load_mock_data(filename: str) -> JsonValueType:
     mock_data = load_json_value_fixture(filename)
     return mock_data
@@ -61,11 +68,11 @@ def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
     """Integration using Modbus."""
     # Create a mock config entry
     mock_data = load_mock_data(filename)
-    assert(isinstance(mock_data, dict))
+    assert isinstance(mock_data, dict)
     telemetry = mock_data[KEY_TELEMETRY]
     settings = mock_data[KEY_SETTINGS]
-    assert(isinstance(telemetry, list))
-    assert(isinstance(settings, list))
+    assert isinstance(telemetry, list)
+    assert isinstance(settings, list)
     all_values = telemetry
     all_values.extend(settings)
     regs_list = []
@@ -74,7 +81,7 @@ def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
         for i, desc in enumerate(reg_desc.descriptors):
             if desc is None:
                 continue
-            entry = find_entry(all_values, desc.key) # type: ignore
+            entry = find_entry(all_values, desc.key)  # type: ignore
             if entry is None:
                 continue
             value = int(str(entry[KEY_ENTRY_VALUE]))
@@ -82,6 +89,7 @@ def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
             regs[i] = value
         regs_list.append(regs)
     return regs_list
+
 
 def load_rest_response():
     regs_list = load_modbus_regs_from_json("rest_response.json")

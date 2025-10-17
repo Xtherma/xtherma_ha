@@ -1,3 +1,5 @@
+"""Tests for the Xtherma number platform."""
+
 import pytest
 from homeassistant.components.number import (
     NumberEntity,

@@ -223,7 +223,7 @@ async def test_rest_error_timeout(hass, aioclient_mock):
 
 
 @pytest.mark.parametrize(
-    ["data", "expected_errors"],
+    ("data", "expected_errors"),
     [
         ({CONF_SERIAL_NUMBER: "FP-04-123456"}, {}),
         (
@@ -238,7 +238,7 @@ async def test_validate_connection(data, expected_errors):
 
 
 @pytest.mark.parametrize(
-    ["data", "side_effect", "expected_errors"],
+    ("data", "side_effect", "expected_errors"),
     [
         ({}, None, {"base": "bad_arguments"}),
         (MOCK_REST_DATA, XthermaBusyError, {"base": "rate_limit"}),
@@ -258,7 +258,7 @@ async def test_validate_rest_api(hass, data, side_effect, expected_errors):
 
 
 @pytest.mark.parametrize(
-    ["data", "side_effect", "expected_errors"],
+    ("data", "side_effect", "expected_errors"),
     [
         (MOCK_MODBUS_DATA | {CONF_HOST: None}, None, {"base": "bad_arguments"}),
         (MOCK_MODBUS_DATA | {CONF_PORT: None}, None, {"base": "bad_arguments"}),

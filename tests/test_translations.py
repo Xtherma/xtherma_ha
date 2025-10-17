@@ -1,3 +1,5 @@
+"""Tests for Xtherma translations."""
+
 from homeassistant.components.binary_sensor import (
     BinarySensorEntityDescription,
 )
@@ -73,10 +75,12 @@ def _get_all_entity_descriptions() -> list[EntityDescription]:
     all_descs.extend(ENTITY_DESCRIPTIONS)
 
     for entity_description in all_descs:
-        if isinstance(entity_description, EntityDescription):
-            if entity_description.key not in keys:
-                keys.add(entity_description.key)
-                descs.append(entity_description)
+        if (
+            isinstance(entity_description, EntityDescription)
+            and entity_description.key not in keys
+        ):
+            keys.add(entity_description.key)
+            descs.append(entity_description)
     return descs
 
 

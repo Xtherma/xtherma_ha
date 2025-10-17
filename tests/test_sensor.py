@@ -1,3 +1,5 @@
+"""Tests for the Xtherma sensor platform."""
+
 import pytest
 from homeassistant.components.sensor import (
     SensorEntity,
@@ -99,11 +101,7 @@ def load_and_prep_rest_response():
     regs_list = load_modbus_regs_from_json("rest_response.json")
     # change "ta" register #140 to be -20 °C in 2s complement
     regs_list[11][0] = ((20 * 10) ^ 65535) + 1
-    return [
-        regs_list
-        # ([...]),x
-        # ([...]),
-    ]
+    return [regs_list]
 
 
 @pytest.mark.parametrize(

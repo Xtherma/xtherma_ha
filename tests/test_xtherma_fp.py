@@ -1,3 +1,5 @@
+"""Tests for the Xtherma API."""
+
 import homeassistant.helpers.entity_registry as er
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_API_KEY, CONF_NAME, Platform
@@ -106,7 +108,7 @@ def verify_parameter_keys(hass: HomeAssistant, entry: ConfigEntry):
         platform = get_platform(hass, domain)
         entity = platform.entities.get(reg_entity.entity_id)
         assert entity is not None
-        key = entity._attr_extra_state_attributes.get(EXTRA_STATE_ATTRIBUTE_PARAMETER)
+        key = entity.extra_state_attributes[EXTRA_STATE_ATTRIBUTE_PARAMETER]
         assert key == entity.entity_description.key
 
 

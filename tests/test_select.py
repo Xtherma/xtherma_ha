@@ -1,3 +1,5 @@
+"""Tests for the Xtherma select platform."""
+
 import pytest
 from homeassistant.components.select import (
     SelectEntity,
@@ -33,11 +35,7 @@ async def test_set_select_rest(hass, init_integration):
 
 def _modbus_data_from_json():
     regs_list = load_modbus_regs_from_json("rest_response.json")
-    return [
-        regs_list
-        # ([...]),x
-        # ([...]),
-    ]
+    return [regs_list]
 
 
 @pytest.mark.parametrize(

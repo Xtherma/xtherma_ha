@@ -1,12 +1,14 @@
+"""Helpers for tests."""
+
 from typing import Any
 
+import pytest
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import EntityPlatform, async_get_platforms
 from homeassistant.util.json import (
     JsonValueType,
 )
-from pytest import fail
 from pytest_homeassistant_custom_component.common import (
     load_json_value_fixture,
 )
@@ -26,7 +28,7 @@ def get_platform(hass: HomeAssistant, domain: str) -> EntityPlatform:
     for platform in platforms:
         if platform.domain == domain:
             return platform
-    fail(f"We have no platfom {domain}")
+    pytest.fail(f"We have no platfom {domain}")
 
 
 def get_sensor_platform(hass: HomeAssistant) -> EntityPlatform:
@@ -47,19 +49,18 @@ def get_select_platform(hass: HomeAssistant) -> EntityPlatform:
     for platform in platforms:
         if platform.domain == Platform.SELECT:
             return platform
-    fail("We have no select platfom")
+    pytest.fail("We have no select platfom")
 
 
 def find_entry(values: list[dict], key: str) -> dict[str, Any] | None:
     for entry in values:
         if entry[KEY_ENTRY_KEY] == key:
             return entry
-    raise Exception(f"Key {key} not found")
+    raise KeyError(key)
 
 
 def load_mock_data(filename: str) -> JsonValueType:
-    mock_data = load_json_value_fixture(filename)
-    return mock_data
+    return load_json_value_fixture(filename)
 
 
 def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
@@ -79,11 +80,10 @@ def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
         for i, desc in enumerate(reg_desc.descriptors):
             if desc is None:
                 continue
-            entry = find_entry(all_values, desc.key)  # type: ignore
+            entry = find_entry(all_values, desc.key)
             if entry is None:
                 continue
             value = int(str(entry[KEY_ENTRY_VALUE]))
-            # print(f"{desc.key} {reg_desc.base}+{i} {reg_desc.base+i} = {value}")
             regs[i] = value
         regs_list.append(regs)
     return regs_list
@@ -91,8 +91,4 @@ def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
 
 def load_rest_response():
     regs_list = load_modbus_regs_from_json("rest_response.json")
-    return [
-        regs_list
-        # ([...]),x
-        # ([...]),
-    ]
+    return [regs_list]

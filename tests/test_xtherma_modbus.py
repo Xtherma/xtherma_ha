@@ -1,3 +1,5 @@
+"""Tests for the Xtherma Modbus API."""
+
 import pytest
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
@@ -24,11 +26,7 @@ def _get_config_entry(hass: HomeAssistant) -> ConfigEntry:
 
 def _modbus_data_from_json():
     regs_list = load_modbus_regs_from_json("rest_response.json")
-    return [
-        regs_list
-        # ([...]),x
-        # ([...]),
-    ]
+    return [regs_list]
 
 
 @pytest.mark.parametrize(

@@ -1,3 +1,5 @@
+"""Tests for entitiy description."""
+
 from homeassistant.components.sensor import (
     SensorDeviceClass,
     SensorEntityDescription,

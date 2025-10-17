@@ -117,7 +117,7 @@ async def _validate_rest_api(
 
 
 async def _validate_modbus_tcp(
-    hass: HomeAssistant,  # noqa: ARG001
+    hass: HomeAssistant,
     data: dict[str, Any],
 ) -> dict[str, str]:
     """Check values in data dict."""
@@ -292,7 +292,7 @@ class XthermaConfigFlow(ConfigFlow, domain=DOMAIN):
     @staticmethod
     @callback
     def async_get_options_flow(
-        config_entry: ConfigEntry,  # noqa: ARG004
+        config_entry: ConfigEntry,
     ) -> OptionsFlowHandler:
         """Create the options flow."""
         return OptionsFlowHandler()

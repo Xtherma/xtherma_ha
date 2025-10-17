@@ -1,6 +1,7 @@
 import os
 import sys
 from unittest.mock import AsyncMock, Mock, patch
+
 import pytest
 
 from tests.helpers import load_mock_data
@@ -16,7 +17,7 @@ VENDOR_DIR = os.path.join(
 print(os.path.abspath(VENDOR_DIR))
 sys.path.insert(0, os.path.abspath(VENDOR_DIR))
 
-from homeassistant.const import CONF_API_KEY, CONF_HOST, CONF_PORT, CONF_ADDRESS
+from homeassistant.const import CONF_ADDRESS, CONF_API_KEY, CONF_HOST, CONF_PORT
 from pytest_homeassistant_custom_component.common import (
     MockConfigEntry,
 )

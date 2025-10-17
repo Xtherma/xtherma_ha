@@ -1,9 +1,9 @@
 import pytest
-from tests.helpers import get_sensor_platform, load_modbus_regs_from_json
-
 from homeassistant.components.sensor import (
     SensorEntity,
 )
+
+from tests.helpers import get_sensor_platform, load_modbus_regs_from_json
 
 SENSOR_ENTITY_ID_PK = "sensor.test_entry_xtherma_config_pk_circulation_pump_enabled"
 SENSOR_ENTITY_ID_PWW = (

@@ -6,6 +6,7 @@ from homeassistant.components.sensor import (
 from homeassistant.const import (
     UnitOfTemperature,
 )
+
 from custom_components.xtherma_fp.entity_descriptors import (
     ENTITY_DESCRIPTIONS,
     XtSensorEntityDescription,

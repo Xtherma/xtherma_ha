@@ -1,6 +1,3 @@
-from homeassistant.helpers.translation import async_get_translations
-from homeassistant.const import Platform
-from homeassistant.helpers.entity import EntityDescription
 from homeassistant.components.binary_sensor import (
     BinarySensorEntityDescription,
 )
@@ -17,11 +14,14 @@ from homeassistant.components.sensor import (
 from homeassistant.components.switch import (
     SwitchEntityDescription,
 )
+from homeassistant.const import Platform
+from homeassistant.helpers.entity import EntityDescription
+from homeassistant.helpers.translation import async_get_translations
 
 from custom_components.xtherma_fp.const import DOMAIN
 from custom_components.xtherma_fp.entity_descriptors import (
-    MODBUS_ENTITY_DESCRIPTIONS,
     ENTITY_DESCRIPTIONS,
+    MODBUS_ENTITY_DESCRIPTIONS,
 )
 
 
@@ -35,9 +35,7 @@ async def test_sensor_name_translation(hass, init_integration):
             hass, lang, "entity", [DOMAIN]
         )
         domain_entity_translations = {
-            k
-            for k in all_entity_translations
-            if k.startswith((prefix)) and ".name" in k
+            k for k in all_entity_translations if k.startswith(prefix) and ".name" in k
         }
 
         # collect all options of all sensors
@@ -116,9 +114,7 @@ async def test_switch_name_translation(hass, init_integration):
             hass, lang, "entity", [DOMAIN]
         )
         domain_entity_translations = {
-            k
-            for k in all_entity_translations
-            if k.startswith((prefix)) and ".name" in k
+            k for k in all_entity_translations if k.startswith(prefix) and ".name" in k
         }
 
         # collect all options of all switches
@@ -150,9 +146,7 @@ async def test_number_name_translation(hass, init_integration):
             hass, lang, "entity", [DOMAIN]
         )
         domain_entity_translations = {
-            k
-            for k in all_entity_translations
-            if k.startswith((prefix)) and ".name" in k
+            k for k in all_entity_translations if k.startswith(prefix) and ".name" in k
         }
 
         # collect all options of all switches
@@ -184,9 +178,7 @@ async def test_select_name_translation(hass, init_integration):
             hass, lang, "entity", [DOMAIN]
         )
         domain_entity_translations = {
-            k
-            for k in all_entity_translations
-            if k.startswith((prefix)) and ".name" in k
+            k for k in all_entity_translations if k.startswith(prefix) and ".name" in k
         }
 
         # collect all options of all switches

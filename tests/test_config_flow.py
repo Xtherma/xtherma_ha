@@ -1,38 +1,28 @@
 """Test config flow."""
 
 import asyncio
-import pytest
 from unittest.mock import patch
 
+import pytest
 from homeassistant.const import (
-    CONF_NAME,
+    CONF_ADDRESS,
     CONF_API_KEY,
     CONF_HOST,
+    CONF_NAME,
     CONF_PORT,
-    CONF_ADDRESS,
 )
 from homeassistant.data_entry_flow import FlowResultType
 
+from custom_components.xtherma_fp.config_flow import (
+    _validate_connection,
+    _validate_modbus_tcp,
+    _validate_rest_api,
+)
 from custom_components.xtherma_fp.const import (
     CONF_CONNECTION,
     CONF_CONNECTION_RESTAPI,
     CONF_SERIAL_NUMBER,
     FERNPORTAL_URL,
-)
-from tests.const import (
-    MOCK_NAME,
-    MOCK_API_KEY,
-    MOCK_SERIAL_NUMBER,
-    MOCK_MODBUS_HOST,
-    MOCK_MODBUS_PORT,
-    MOCK_MODBUS_ADDRESS,
-)
-from tests.helpers import load_mock_data
-
-from custom_components.xtherma_fp.config_flow import (
-    _validate_connection,
-    _validate_rest_api,
-    _validate_modbus_tcp,
 )
 from custom_components.xtherma_fp.xtherma_client_common import (
     XthermaBusyError,
@@ -40,7 +30,15 @@ from custom_components.xtherma_fp.xtherma_client_common import (
     XthermaNotConnectedError,
     XthermaTimeoutError,
 )
-
+from tests.const import (
+    MOCK_API_KEY,
+    MOCK_MODBUS_ADDRESS,
+    MOCK_MODBUS_HOST,
+    MOCK_MODBUS_PORT,
+    MOCK_NAME,
+    MOCK_SERIAL_NUMBER,
+)
+from tests.helpers import load_mock_data
 
 MOCK_REST_DATA = {CONF_NAME: MOCK_NAME, CONF_API_KEY: MOCK_API_KEY}
 

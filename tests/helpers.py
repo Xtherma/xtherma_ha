@@ -1,13 +1,15 @@
 from typing import Any
-import warnings
+
 from homeassistant.const import Platform
-from homeassistant.core import HomeAssistant, State
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.helpers.entity_platform import async_get_platforms, EntityPlatform
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.entity_platform import EntityPlatform, async_get_platforms
 from homeassistant.util.json import (
     JsonValueType,
 )
 from pytest import fail
+from pytest_homeassistant_custom_component.common import (
+    load_json_value_fixture,
+)
 
 from custom_components.xtherma_fp.const import (
     DOMAIN,
@@ -16,10 +18,6 @@ from custom_components.xtherma_fp.const import (
     KEY_SETTINGS,
     KEY_TELEMETRY,
 )
-from pytest_homeassistant_custom_component.common import (
-    load_json_value_fixture,
-)
-
 from custom_components.xtherma_fp.entity_descriptors import MODBUS_ENTITY_DESCRIPTIONS
 
 

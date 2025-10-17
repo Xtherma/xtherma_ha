@@ -1,10 +1,5 @@
 from pytest_homeassistant_custom_component.common import load_json_value_fixture
 
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers.entity_platform import async_get_platforms, EntityPlatform
-
-from custom_components.xtherma_fp.const import DOMAIN
-
 
 def test_json_load_value_fixture():
     data = load_json_value_fixture("rest_response.json")

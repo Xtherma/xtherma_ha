@@ -1,24 +1,10 @@
-import asyncio
-from datetime import timedelta
-from unittest.mock import patch
-from homeassistant.const import Platform
-
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_API_KEY, CONF_NAME
-from homeassistant.core import HomeAssistant
 import homeassistant.helpers.entity_registry as er
-from homeassistant.helpers.entity_platform import async_get_platforms, EntityPlatform
-from homeassistant.helpers.entity import Entity
-
-from pytest import fail
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import CONF_API_KEY, CONF_NAME, Platform
+from homeassistant.core import HomeAssistant
 from pytest_homeassistant_custom_component.common import (
     MockConfigEntry,
-    load_json_value_fixture,
 )
-from pytest_homeassistant_custom_component.test_util.aiohttp import (
-    MockLongPollSideEffect,
-)
-from sqlalchemy import desc
 
 from custom_components.xtherma_fp.const import (
     CONF_CONNECTION,
@@ -29,7 +15,7 @@ from custom_components.xtherma_fp.const import (
     FERNPORTAL_URL,
 )
 from custom_components.xtherma_fp.xtherma_data import XthermaData
-from tests.const import MOCK_API_KEY, MOCK_SERIAL_NUMBER, MOCK_NAME
+from tests.const import MOCK_API_KEY, MOCK_NAME, MOCK_SERIAL_NUMBER
 from tests.helpers import get_platform, load_mock_data
 
 

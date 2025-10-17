@@ -1,11 +1,7 @@
 import pytest
-from homeassistant.components.binary_sensor import (
-    BinarySensorDeviceClass,
-)
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
-from custom_components.xtherma_fp.xtherma_data import XthermaData
 from tests.const import (
     MOCK_CONFIG_ENTRY_ID,
 )

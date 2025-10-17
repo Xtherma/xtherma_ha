@@ -1,12 +1,10 @@
-from token import NUMBER
+import pytest
 from homeassistant.components.number import (
     NumberEntity,
 )
-import pytest
-
-from custom_components.xtherma_fp.xtherma_client_common import XthermaReadOnlyError
-from tests.helpers import get_number_platform, load_rest_response
 from homeassistant.exceptions import HomeAssistantError
+
+from tests.helpers import get_number_platform, load_rest_response
 
 NUMBER_ENTITY_ID_451 = (
     "number.test_entry_xtherma_config_cooling_curve_2_outside_temperature_low_p1"

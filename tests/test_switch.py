@@ -1,11 +1,10 @@
+import pytest
 from homeassistant.components.switch import (
     SwitchEntity,
 )
-import pytest
-
-from custom_components.xtherma_fp.xtherma_client_common import XthermaReadOnlyError
-from tests.helpers import get_switch_platform, load_modbus_regs_from_json
 from homeassistant.exceptions import HomeAssistantError
+
+from tests.helpers import get_switch_platform, load_modbus_regs_from_json
 
 SWITCH_ENTITY_ID_450 = "switch.test_entry_xtherma_config_cooling_curve_2_active"
 SWITCH_ENTITY_ID_MODBUS_450 = (

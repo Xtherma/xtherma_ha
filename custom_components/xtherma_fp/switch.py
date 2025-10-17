@@ -64,7 +64,7 @@ def _initialize_switches(
 
 
 async def async_setup_entry(
-    hass: HomeAssistant,  # noqa: ARG001
+    hass: HomeAssistant,
     config_entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> bool:
@@ -131,7 +131,7 @@ class XthermaSwitchEntity(CoordinatorEntity, SwitchEntity):
             return self.xt_description.icon_provider(self.is_on)
         return super().icon
 
-    async def async_turn_on(self, **kwargs: Any) -> None:  # noqa: ANN401, ARG002
+    async def async_turn_on(self, **kwargs: Any) -> None:  # noqa: ANN401
         """Turn the entity on."""
         try:
             await self._coordinator.async_write(self, 1)
@@ -143,7 +143,7 @@ class XthermaSwitchEntity(CoordinatorEntity, SwitchEntity):
             self._attr_force_update = False
             raise
 
-    async def async_turn_off(self, **kwargs: Any) -> None:  # noqa: ANN401, ARG002
+    async def async_turn_off(self, **kwargs: Any) -> None:  # noqa: ANN401
         """Turn the entity off."""
         try:
             await self._coordinator.async_write(self, 0)

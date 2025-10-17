@@ -1,11 +1,10 @@
+import pytest
 from homeassistant.components.select import (
     SelectEntity,
 )
-import pytest
-
-from custom_components.xtherma_fp.xtherma_client_common import XthermaReadOnlyError
-from tests.helpers import get_select_platform, load_modbus_regs_from_json
 from homeassistant.exceptions import HomeAssistantError
+
+from tests.helpers import get_select_platform, load_modbus_regs_from_json
 
 SELECT_ENTITY_ID_002 = "select.test_entry_xtherma_config_operating_mode"
 SELECT_ENTITY_ID_MODBUS_002 = "select.test_entry_xtherma_modbus_config_operating_mode"

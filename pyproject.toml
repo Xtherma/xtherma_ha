@@ -4,18 +4,51 @@ description = "Xtherma integration for Home Assistant"
 license = "Apache License Version 2.0"
 version = "v0.1"
 authors = [
-    {name = "xrad"},
+  {name = "xrad"},
 ]
 requires-python = '>=3.13,<3.14'
 dynamic = ["dependencies"]
 
 [tool.ruff]
-fix = true
-extend-exclude = ["tests", "custom_components/xtherma_fp/vendor"]
-lint.select = ["ALL"]
-lint.extend-ignore = ["ANN001", "EXE002","FBT001"]
-lint.pydocstyle.convention = "google"
-format.docstring-code-format = true
+extend-exclude = ["custom_components/xtherma_fp/vendor"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ARG",    # flake8-unused-arguments
+  "ANN001", # Missing type annotation for function argument {name}
+  "E501",   # Line too long ({width} > {limit})
+  "EXE002", # The file is executable but no shebang is present
+  "FBT001", # Boolean-typed positional argument in function definition
+
+  # May conflict with the formatter, https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+  "W191",
+  "E111",
+  "E114",
+  "E117",
+  "D206",
+  "D300",
+  "Q",
+  "COM812",
+  "COM819",
+]
+
+[tool.ruff.lint.per-file-ignores]
+  "tests/*" = [
+    "ANN",      # flake8-annotations
+    "S101",     # Use of assert detected
+    "PLR2004",  # Magic value used in comparison, consider replacing {value} with a constant variable
+    "D103"      # Missing docstring in public function
+  ]
+  "tests/conftest.py" = [
+    "E402"      # Module level import not at top of cell
+  ]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

@@ -44,12 +44,7 @@ def get_number_platform(hass: HomeAssistant) -> EntityPlatform:
 
 
 def get_select_platform(hass: HomeAssistant) -> EntityPlatform:
-    platforms = async_get_platforms(hass, DOMAIN)
-    assert len(platforms) == 4
-    for platform in platforms:
-        if platform.domain == Platform.SELECT:
-            return platform
-    pytest.fail("We have no select platfom")
+    return get_platform(hass, Platform.SELECT)
 
 
 def find_entry(values: list[dict], key: str) -> dict[str, Any] | None:
@@ -90,5 +85,9 @@ def load_modbus_regs_from_json(filename: str) -> list[list[int]]:
 
 
 def load_rest_response():
+    """Return a list of complete Modbus register read-outs.
+
+    Currently returns only one read-out based on our standard REST API response.
+    """
     regs_list = load_modbus_regs_from_json("rest_response.json")
     return [regs_list]

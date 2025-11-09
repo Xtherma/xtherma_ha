@@ -10,7 +10,6 @@ requires-python = '>=3.13,<3.14'
 dynamic = ["dependencies"]
 
 [tool.ruff]
-extend-exclude = ["custom_components/xtherma_fp/vendor"]
 
 [tool.ruff.lint]
 select = ["ALL"]

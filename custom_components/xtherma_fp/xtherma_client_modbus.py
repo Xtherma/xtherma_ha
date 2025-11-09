@@ -7,6 +7,11 @@ from homeassistant.components.sensor import (
     SensorDeviceClass,
 )
 from homeassistant.helpers.entity import EntityDescription
+from pymodbus import ModbusException
+from pymodbus.client import (
+    AsyncModbusTcpClient,
+)
+
 
 from .const import (
     MODBUS_TIMEOUT_S,
@@ -19,7 +24,6 @@ from .entity_descriptors import (
     XtNumericEntityDescription,
     XtSensorEntityDescription,
 )
-from .vendor.pymodbus import AsyncModbusTcpClient, ExceptionResponse, ModbusException
 from .xtherma_client_common import (
     XthermaClient,
     XthermaError,

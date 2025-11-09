@@ -2,6 +2,7 @@
 
 import logging
 from datetime import timedelta
+from typing import Any
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -12,6 +13,10 @@ from pymodbus.client import (
     AsyncModbusTcpClient,
 )
 
+from custom_components.xtherma_fp.pymodbus_compat import (
+    COMPAT_DEVICE_BUSY,
+    COMPAT_DEVICE_ID,
+)
 
 from .const import (
     MODBUS_TIMEOUT_S,
@@ -54,7 +59,7 @@ class XthermaClientModbus(XthermaClient):
         """Class constructor."""
         self._host = host
         self._port = port
-        self._address = address
+        self._device_address_kwarg: dict[str, Any] = {COMPAT_DEVICE_ID: int(address)}
         self._desc_regset_cache: dict[str, int] = {}
         self._last_update: dict[str, int | float] = {}
         self._read_buffer = [0] * MODBUS_REGISTER_SIZE
@@ -128,9 +133,7 @@ class XthermaClientModbus(XthermaClient):
         """Read a range of modbus holding registers into read buffer."""
         try:
             regs = await client.read_holding_registers(
-                address=address,
-                count=length,
-                slave=int(self._address),
+                address=address, count=length, **self._device_address_kwarg
             )
         except ModbusException as err:
             _LOGGER.debug("Modbus exception: %s", err.string)
@@ -141,7 +144,7 @@ class XthermaClientModbus(XthermaClient):
         else:
             if regs.isError():
                 exc_code = regs.exception_code
-                if exc_code == ExceptionResponse.SLAVE_BUSY:
+                if exc_code == COMPAT_DEVICE_BUSY:
                     _LOGGER.debug("Modbus device busy")
                     raise XthermaModbusBusyError
                 _LOGGER.debug("Modbus error %s", regs.exception_code)
@@ -213,9 +216,7 @@ class XthermaClientModbus(XthermaClient):
                 address,
             )
             regs = await client.write_register(
-                address=address,
-                value=encoded_value,
-                slave=int(self._address),
+                address=address, value=encoded_value, **self._device_address_kwarg
             )
         except Exception as err:
             _LOGGER.exception("Exception error")
@@ -223,7 +224,7 @@ class XthermaClientModbus(XthermaClient):
         else:
             if regs.isError():
                 exc_code = regs.exception_code
-                if exc_code == ExceptionResponse.SLAVE_BUSY:
+                if exc_code == COMPAT_DEVICE_BUSY:
                     _LOGGER.error("Device busy")
                     raise XthermaModbusBusyError
                 _LOGGER.error("Modbus write error %s", exc_code)

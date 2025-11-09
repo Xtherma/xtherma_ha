@@ -9,6 +9,9 @@ from homeassistant.const import ATTR_ENTITY_ID, Platform
 from homeassistant.exceptions import HomeAssistantError
 from pytest_homeassistant_custom_component.common import snapshot_platform
 
+from custom_components.xtherma_fp.pymodbus_compat import (
+    COMPAT_DEVICE_ID,
+)
 from custom_components.xtherma_fp.xtherma_client_common import XthermaReadOnlyError
 from tests.helpers import provide_modbus_data, provide_rest_data
 
@@ -85,7 +88,7 @@ async def test_set_number_modbus(hass, mock_modbus_tcp_client):
     assert kwargs["address"] == 41
     assert hass.states.get(NUMBER_ENTITY_ID_MODBUS_451).state == "16"
     assert kwargs["value"] == 16
-    assert kwargs["slave"] == 1
+    assert kwargs[COMPAT_DEVICE_ID] == 1
 
 
 # check writing negative values as 2s complement
@@ -108,4 +111,4 @@ async def test_set_negative_number_modbus(hass, mock_modbus_tcp_client):
     assert kwargs["address"] == 31
     assert hass.states.get(NUMBER_ENTITY_ID_MODBUS_411).state == "-20"
     assert kwargs["value"] == (20 ^ 65535) + 1
-    assert kwargs["slave"] == 1
+    assert kwargs[COMPAT_DEVICE_ID] == 1

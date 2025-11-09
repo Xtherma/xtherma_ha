@@ -15,6 +15,7 @@ from homeassistant.const import (
 from homeassistant.exceptions import HomeAssistantError
 from pytest_homeassistant_custom_component.common import snapshot_platform
 
+from custom_components.xtherma_fp.pymodbus_compat import COMPAT_DEVICE_ID
 from custom_components.xtherma_fp.xtherma_client_common import XthermaReadOnlyError
 from tests.helpers import provide_modbus_data, provide_rest_data
 
@@ -80,7 +81,7 @@ async def test_set_switch_modbus(hass, mock_modbus_tcp_client):
     # verify arguments passed to write_register()
     assert kwargs["address"] == 40
     assert kwargs["value"] == 0
-    assert kwargs["slave"] == 1
+    assert kwargs[COMPAT_DEVICE_ID] == 1
 
     await hass.services.async_call(
         DOMAIN,
@@ -94,4 +95,4 @@ async def test_set_switch_modbus(hass, mock_modbus_tcp_client):
     # verify arguments passed to write_register()
     assert kwargs["address"] == 40
     assert kwargs["value"] == 1
-    assert kwargs["slave"] == 1
+    assert kwargs[COMPAT_DEVICE_ID] == 1

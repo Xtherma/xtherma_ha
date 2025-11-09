@@ -1,6 +1,12 @@
-colorlog==6.10.1
-homeassistant==2025.9.3
-pip>=21.3.1
-ruff==0.14.3
-pre-commit>=4.2.0
+# Criticial dependencies for XTherma Home Assistant integration
+# See also CI workflow for testing version matrices
+
+# Home Assistant core dependencies
+homeassistant==2025.11.1
+
+# This matches manifest.json
+pymodbus==3.11.2
+
+# need to specify this or HA won't start up correctly
 bleak==1.1.1
+

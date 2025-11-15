@@ -4,9 +4,6 @@ import logging
 from datetime import timedelta
 from typing import Any
 
-from homeassistant.components.number import (
-    NumberDeviceClass,
-)
 from homeassistant.components.sensor import (
     SensorDeviceClass,
 )
@@ -94,25 +91,19 @@ class XthermaClientModbus(XthermaClient):
         """Return update interval for data coordinator."""
         return timedelta(seconds=_MODBUS_UPDATE_PERIOD_S)
 
-    # apply two's complement for negative values. For now, only temperatures can be
-    # negative.
+    # decode two's complement for negative scalar values.
     def _decode_int(self, raw_value: int, desc: EntityDescription) -> int:
-        if (
-            desc.device_class
-            in (SensorDeviceClass.TEMPERATURE, NumberDeviceClass.TEMPERATURE)
-            and raw_value > _MODBUS_MAX_VALUE // 2
-        ):
+        if desc.device_class == SensorDeviceClass.ENUM:
+            return raw_value
+        if raw_value > _MODBUS_MAX_VALUE // 2:
             return -((raw_value - 1) ^ _MODBUS_MAX_VALUE)
         return raw_value
 
-    # apply two's complement for negative values. For now, only temperatures can be
-    # negative.
+    # apply two's complement for negative scalar values.
     def _encode_int(self, signed_value: int, desc: EntityDescription) -> int:
-        if (
-            desc.device_class
-            in (SensorDeviceClass.TEMPERATURE, NumberDeviceClass.TEMPERATURE)
-            and signed_value < 0
-        ):
+        if desc.device_class == SensorDeviceClass.ENUM:
+            return signed_value
+        if signed_value < 0:
             return ((-signed_value) ^ _MODBUS_MAX_VALUE) + 1
         return signed_value
 

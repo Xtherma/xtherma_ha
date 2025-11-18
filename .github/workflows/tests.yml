@@ -37,6 +37,42 @@ jobs:
         run: |
           python -m pytest --timeout=10 tests
 
+  compatibility:
+    name: HA ${{ matrix.ha-version }} / PyModbus ${{ matrix.pymodbus-version }}
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        ha-version: ["2025.7.1", "latest"]
+        pymodbus-version: ["3.9.0", "3.9.2", "3.11.1"]
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python ${{ env.DEFAULT_PYTHON }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ env.DEFAULT_PYTHON }}
+
+      - name: Install Python requirements
+        run: |
+          pip install --upgrade -r requirements.txt -r dev-requirements.txt
+          pip uninstall -y pymodbus homeassistant pytest-homeassistant-custom-component
+          pip install --upgrade "pymodbus==${{ matrix.pymodbus-version }}"
+          if [ "${{ matrix.ha-version }}" = "latest" ]; then
+            pip install --upgrade homeassistant
+          else
+            pip install --upgrade "homeassistant==${{ matrix.ha-version }}"
+          fi
+          pip install pytest-homeassistant-custom-component
+
+      - name: Run pytest
+        run: |
+          python -m pytest --timeout=10 tests
+
   hacs:
     runs-on: "ubuntu-latest"
     name: HACS

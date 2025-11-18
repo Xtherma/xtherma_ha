@@ -7,12 +7,14 @@ from homeassistant.components.sensor import DOMAIN as DOMAIN_SENSOR
 from homeassistant.config_entries import ConfigEntryState
 from homeassistant.const import EVENT_STATE_CHANGED
 from homeassistant.helpers.update_coordinator import UpdateFailed
-from pymodbus.pdu.pdu import ExceptionResponse
 
 from custom_components.xtherma_fp.const import CONF_DETECT_EMPTY_MODBUS_DATA, DOMAIN
 from custom_components.xtherma_fp.entity_descriptors import (
     MODBUS_ENTITY_DESCRIPTIONS,
     MODBUS_REGISTER_RANGES,
+)
+from custom_components.xtherma_fp.pymodbus_compat import (
+    COMPAT_DEVICE_BUSY,
 )
 from tests.conftest import MockModbusParam
 from tests.helpers import (
@@ -51,7 +53,7 @@ async def test_async_setup_entry_modbus_ok(hass, mock_modbus_tcp_client):
 
 @pytest.mark.parametrize(
     "mock_modbus_tcp_client",
-    provide_modbus_data(exc_code=ExceptionResponse.SLAVE_BUSY),
+    provide_modbus_data(exc_code=COMPAT_DEVICE_BUSY),
     indirect=True,
 )
 @pytest.mark.asyncio
@@ -69,7 +71,7 @@ def _test_modbus_runtime_read_busy() -> list[MockModbusParam]:
     param_setup: list[MockModbusParam] = provide_modbus_data()
     param_runtime: list[MockModbusParam] = provide_modbus_data()
     for regs in param_runtime[0]:
-        regs["exc_code"] = ExceptionResponse.SLAVE_BUSY
+        regs["exc_code"] = COMPAT_DEVICE_BUSY
     return [param_setup[0] + param_runtime[0]]
 
 

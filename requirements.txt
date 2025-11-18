@@ -2,7 +2,7 @@
 # See also CI workflow for testing version matrices
 
 # Home Assistant core dependencies
-homeassistant==2025.11.1
+homeassistant==2025.11.2
 
 # This matches manifest.json
 pymodbus==3.11.2

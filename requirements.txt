@@ -5,7 +5,7 @@
 homeassistant==2025.11.1
 
 # This matches manifest.json
-pymodbus==3.11.2
+pymodbus==3.11.3
 
 # need to specify this or HA won't start up correctly
 bleak==1.1.1

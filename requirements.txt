@@ -8,4 +8,4 @@ homeassistant==2025.11.1
 bleak==1.1.1
 
 # temporary fix until https://github.com/home-assistant/core/pull/158695 is available
-pycares<5
+pycares<6

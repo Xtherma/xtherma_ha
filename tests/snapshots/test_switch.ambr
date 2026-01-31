@@ -20,7 +20,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 active',
     'options': dict({
     }),
     'original_device_class': None,
@@ -71,7 +70,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 active',
     'options': dict({
     }),
     'original_device_class': None,
@@ -122,7 +120,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heat pump turned on',
     'options': dict({
     }),
     'original_device_class': None,
@@ -172,7 +169,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 enabled',
     'options': dict({
     }),
     'original_device_class': None,
@@ -223,7 +219,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 enabled',
     'options': dict({
     }),
     'original_device_class': None,
@@ -274,7 +269,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Hot water now',
     'options': dict({
     }),
     'original_device_class': None,
@@ -325,7 +319,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '§14a EnWG request',
     'options': dict({
     }),
     'original_device_class': None,
@@ -375,7 +368,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 active',
     'options': dict({
     }),
     'original_device_class': None,
@@ -426,7 +418,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 active',
     'options': dict({
     }),
     'original_device_class': None,
@@ -477,7 +468,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heat pump turned on',
     'options': dict({
     }),
     'original_device_class': None,
@@ -527,7 +517,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 enabled',
     'options': dict({
     }),
     'original_device_class': None,
@@ -578,7 +567,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 enabled',
     'options': dict({
     }),
     'original_device_class': None,
@@ -629,7 +617,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Hot water now',
     'options': dict({
     }),
     'original_device_class': None,
@@ -680,7 +667,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '§14a EnWG request',
     'options': dict({
     }),
     'original_device_class': None,

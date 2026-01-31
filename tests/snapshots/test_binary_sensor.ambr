@@ -20,7 +20,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'EVU status',
     'options': dict({
     }),
     'original_device_class': None,
@@ -71,7 +70,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PK1] Circulation pump circuit 1 enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -123,7 +121,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PK2] Circulation pump circuit 2 enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -175,7 +172,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PK] Circulation pump enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -227,7 +223,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PWW] Circulation pump hot water enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -279,7 +274,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '§14a EnWG state',
     'options': dict({
     }),
     'original_device_class': None,
@@ -329,7 +323,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'System ok',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -381,7 +374,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'EVU status',
     'options': dict({
     }),
     'original_device_class': None,
@@ -432,7 +424,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PK1] Circulation pump circuit 1 enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -484,7 +475,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PK2] Circulation pump circuit 2 enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -536,7 +526,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PK] Circulation pump enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -588,7 +577,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '[PWW] Circulation pump hot water enabled',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,
@@ -640,7 +628,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': '§14a EnWG state',
     'options': dict({
     }),
     'original_device_class': None,
@@ -690,7 +677,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'System ok',
     'options': dict({
     }),
     'original_device_class': <BinarySensorDeviceClass.RUNNING: 'running'>,

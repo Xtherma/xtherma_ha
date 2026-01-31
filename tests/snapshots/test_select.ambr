@@ -28,7 +28,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Operating mode',
     'options': dict({
     }),
     'original_device_class': None,
@@ -93,7 +92,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready request',
     'options': dict({
     }),
     'original_device_class': None,
@@ -158,7 +156,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Operating mode',
     'options': dict({
     }),
     'original_device_class': None,
@@ -223,7 +220,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready request',
     'options': dict({
     }),
     'original_device_class': None,

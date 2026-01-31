@@ -25,7 +25,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 constant cooling temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -87,7 +86,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 cooling temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -149,7 +147,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 cooling temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -211,7 +208,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -273,7 +269,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -335,7 +330,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 constant cooling temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -397,7 +391,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 cooling temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -459,7 +452,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 cooling temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -521,7 +513,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -583,7 +574,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -645,7 +635,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 constant heating temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -707,7 +696,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 heating temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -769,7 +757,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 heating temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -831,7 +818,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -893,7 +879,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -955,7 +940,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 constant heating temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1017,7 +1001,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 heating temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1079,7 +1062,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 heating temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1141,7 +1123,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1203,7 +1184,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1265,7 +1245,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready lower cooling temperature by',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1327,7 +1306,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready raise heating temperature by',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1389,7 +1367,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready raise warm water temperature by',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1451,7 +1428,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Target keep water warm',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1513,7 +1489,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Target warm water production',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1575,7 +1550,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 constant cooling temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1637,7 +1611,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 cooling temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1699,7 +1672,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 cooling temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1761,7 +1733,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1823,7 +1794,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 1 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1885,7 +1855,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 constant cooling temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -1947,7 +1916,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 cooling temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2009,7 +1977,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 cooling temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2071,7 +2038,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2133,7 +2099,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Cooling curve 2 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2195,7 +2160,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 constant heating temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2257,7 +2221,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 heating temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2319,7 +2282,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 heating temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2381,7 +2343,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2443,7 +2404,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 1 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2505,7 +2465,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 constant heating temperature',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2567,7 +2526,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 heating temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2629,7 +2587,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 heating temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2691,7 +2648,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 outside temperature high (P2)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2753,7 +2709,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Heating curve 2 outside temperature low (P1)',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2815,7 +2770,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready lower cooling temperature by',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2877,7 +2831,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready raise heating temperature by',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -2939,7 +2892,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'SG-Ready raise warm water temperature by',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -3001,7 +2953,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Target keep water warm',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,
@@ -3063,7 +3014,6 @@
     'labels': set({
     }),
     'name': None,
-    'object_id_base': 'Target warm water production',
     'options': dict({
     }),
     'original_device_class': <NumberDeviceClass.TEMPERATURE: 'temperature'>,

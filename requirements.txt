@@ -2,10 +2,7 @@
 # See also CI workflow for testing version matrices
 
 # Home Assistant core dependencies
-homeassistant==2025.11.1
+homeassistant==2026.1.1
 
 # need to specify this or HA won't start up correctly
 bleak==1.1.1
-
-# temporary fix until https://github.com/home-assistant/core/pull/158695 is available
-pycares<5

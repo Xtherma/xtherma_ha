@@ -5,4 +5,4 @@
 homeassistant==2026.1.1
 
 # need to specify this or HA won't start up correctly
-bleak==1.1.1
+bleak==2.1.1

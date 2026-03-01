@@ -22,6 +22,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Coefficient of performance heat pump',
     'options': dict({
     }),
     'original_device_class': None,
@@ -75,6 +76,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Compressor frequency',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -131,6 +133,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Controller version',
     'options': dict({
     }),
     'original_device_class': None,
@@ -189,6 +192,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Current operating mode',
     'options': dict({
     }),
     'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
@@ -249,6 +253,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily cooling operation electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -307,6 +312,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily cooling operation thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -365,6 +371,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 1 (3 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -423,6 +430,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 1 (3 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -481,6 +489,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 2 (6 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -539,6 +548,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 2 (6 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -597,6 +607,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW operation electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -655,6 +666,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 1 (3 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -713,6 +725,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 1 (3 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -771,6 +784,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 2 (6 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -829,6 +843,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 2 (6 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -887,6 +902,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating operation electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -945,6 +961,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating operation thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -1003,6 +1020,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily hot water operation thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -1061,6 +1079,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Heat output auxiliary/emergency heating (thermal)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1119,6 +1138,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Heat output heat pump (thermal)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1177,6 +1197,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[LD1] Fan 1 speed',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1234,6 +1255,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[LD2] Fan 2 speed',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1291,6 +1313,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Overall coefficient of performance (incl. auxiliary heating)',
     'options': dict({
     }),
     'original_device_class': None,
@@ -1344,6 +1367,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Overall system heat output (thermal)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1402,6 +1426,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Overall system power consumption (electric)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1460,6 +1485,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[PKL] Circulation pump performance',
     'options': dict({
     }),
     'original_device_class': None,
@@ -1514,6 +1540,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Power consumption auxiliary/emergency heating (electric)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1572,6 +1599,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Power consumption heat pump (electric)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -1636,6 +1664,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'SG-Ready Status',
     'options': dict({
     }),
     'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
@@ -1696,6 +1725,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA1] Outdoor temperature average (1h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -1754,6 +1784,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA24] Outdoor temperature average (24h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -1812,6 +1843,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA4] Outdoor temperature average (4h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -1870,6 +1902,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA8] Outdoor temperature average (8h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -1928,6 +1961,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA] Outdoor temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -1986,6 +2020,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target cooling 1',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2044,6 +2079,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target cooling 2',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2102,6 +2138,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target cooling operation',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2160,6 +2197,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target heating 1',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2218,6 +2256,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target heating 2',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2276,6 +2315,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target heating operation',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2334,6 +2374,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target hot water production (current)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2392,6 +2433,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TK1] Circuit 1 temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2450,6 +2492,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TK2] Circuit 2 temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2508,6 +2551,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TK] Heating / Cooling temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2566,6 +2610,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TR] Room temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2624,6 +2669,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TRL] Return temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2682,6 +2728,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TVL] Flow temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2740,6 +2787,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TW] Hot water temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -2798,6 +2846,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[V] Volume flow',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -2856,6 +2905,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Coefficient of performance heat pump',
     'options': dict({
     }),
     'original_device_class': None,
@@ -2909,6 +2959,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Compressor frequency',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -2965,6 +3016,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Controller version',
     'options': dict({
     }),
     'original_device_class': None,
@@ -3023,6 +3075,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Current operating mode',
     'options': dict({
     }),
     'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
@@ -3083,6 +3136,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily cooling operation electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3141,6 +3195,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily cooling operation thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3199,6 +3254,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 1 (3 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3257,6 +3313,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 1 (3 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3315,6 +3372,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 2 (6 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3373,6 +3431,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW auxiliary stage 2 (6 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3431,6 +3490,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily DHW operation electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3489,6 +3549,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 1 (3 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3547,6 +3608,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 1 (3 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3605,6 +3667,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 2 (6 kW) electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3663,6 +3726,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating auxiliary stage 2 (6 kW) thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3721,6 +3785,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating operation electric power consumption',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3779,6 +3844,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily heating operation thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3837,6 +3903,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Daily hot water operation thermal output',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 2,
@@ -3895,6 +3962,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Heat output auxiliary/emergency heating (thermal)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -3953,6 +4021,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Heat output heat pump (thermal)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -4011,6 +4080,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[LD1] Fan 1 speed',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -4068,6 +4138,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[LD2] Fan 2 speed',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -4125,6 +4196,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Overall coefficient of performance (incl. auxiliary heating)',
     'options': dict({
     }),
     'original_device_class': None,
@@ -4178,6 +4250,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[PKL] Circulation pump performance',
     'options': dict({
     }),
     'original_device_class': None,
@@ -4232,6 +4305,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Power consumption auxiliary/emergency heating (electric)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -4290,6 +4364,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Power consumption heat pump (electric)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,
@@ -4354,6 +4429,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'SG-Ready Status',
     'options': dict({
     }),
     'original_device_class': <SensorDeviceClass.ENUM: 'enum'>,
@@ -4414,6 +4490,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA1] Outdoor temperature average (1h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4472,6 +4549,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA24] Outdoor temperature average (24h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4530,6 +4608,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA4] Outdoor temperature average (4h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4588,6 +4667,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA8] Outdoor temperature average (8h)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4646,6 +4726,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TA] Outdoor temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4704,6 +4785,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target cooling 1',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4762,6 +4844,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target cooling 2',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4820,6 +4903,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target cooling operation',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4878,6 +4962,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target heating 1',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4936,6 +5021,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target heating 2',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -4994,6 +5080,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target heating operation',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5052,6 +5139,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': 'Target hot water production (current)',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5110,6 +5198,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TK1] Circuit 1 temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5168,6 +5257,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TK2] Circuit 2 temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5226,6 +5316,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TK] Heating / Cooling temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5284,6 +5375,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TR] Room temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5342,6 +5434,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TRL] Return temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5400,6 +5493,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TVL] Flow temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5458,6 +5552,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[TW] Hot water temperature',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 1,
@@ -5516,6 +5611,7 @@
     'labels': set({
     }),
     'name': None,
+    'object_id_base': '[V] Volume flow',
     'options': dict({
       'sensor': dict({
         'suggested_display_precision': 0,

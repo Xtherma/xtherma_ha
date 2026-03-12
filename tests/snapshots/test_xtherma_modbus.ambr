@@ -2040,3 +2040,49 @@
     ]),
   })
 # ---
+# name: test_modbus_register_descriptions_match_spec[70]
+  dict({
+    'base': 70,
+    'descriptors': list([
+      dict({
+        'device_class': None,
+        'entity_category': None,
+        'entity_registry_enabled_default': True,
+        'entity_registry_visible_default': True,
+        'force_update': False,
+        'has_entity_name': False,
+        'icon': None,
+        'icon_provider': None,
+        'key': 'x2400',
+        'name': <UndefinedType._singleton: 0>,
+        'translation_key': None,
+        'translation_placeholders': None,
+        'unit_of_measurement': None,
+      }),
+      dict({
+        'device_class': <NumberDeviceClass.POWER: 'power'>,
+        'entity_category': None,
+        'entity_registry_enabled_default': True,
+        'entity_registry_visible_default': True,
+        'factor': None,
+        'force_update': False,
+        'has_entity_name': False,
+        'icon': 'mdi:lightning-bolt',
+        'icon_provider': None,
+        'key': 'x2401',
+        'max_value': None,
+        'min_value': None,
+        'mode': <NumberMode.BOX: 'box'>,
+        'name': <UndefinedType._singleton: 0>,
+        'native_max_value': 65000,
+        'native_min_value': 0,
+        'native_step': 1,
+        'native_unit_of_measurement': <UnitOfPower.WATT: 'W'>,
+        'step': None,
+        'translation_key': None,
+        'translation_placeholders': None,
+        'unit_of_measurement': None,
+      }),
+    ]),
+  })
+# ---

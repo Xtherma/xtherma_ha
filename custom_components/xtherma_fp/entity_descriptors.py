@@ -523,6 +523,21 @@ _sensor_815 = XtSwitchEntityDescription(
     key="815",
 )
 
+_sensor_x2400 = XtSwitchEntityDescription(
+    key="x2400",
+)
+
+_sensor_x2401 = XtNumberEntityDescription(
+    key="x2401",
+    native_unit_of_measurement=UnitOfPower.WATT,
+    device_class=NumberDeviceClass.POWER,
+    icon=_icon_electric_power,
+    mode=NumberMode.BOX,
+    native_min_value=0,
+    native_max_value=65000,
+    native_step=1,
+)
+
 #
 # Telemetry
 #
@@ -1029,6 +1044,25 @@ _MODBUS_SETTINGS_NETWORK = ModbusRegisterSet(
     ],
 )
 
+_MODBUS_SETTINGS_NETWORK = ModbusRegisterSet(
+    base=60,
+    descriptors=[
+        _sensor_808,
+        _sensor_811,
+        _sensor_812,
+        _sensor_813,
+        _sensor_815,
+    ],
+)
+
+_MODBUS_SETTINGS_SURPLUS = ModbusRegisterSet(
+    base=70,
+    descriptors=[
+        _sensor_x2400,
+        _sensor_x2401,
+    ],
+)
+
 _MODBUS_TELEMETRY_GENERAL = ModbusRegisterSet(
     base=100,
     descriptors=[
@@ -1135,6 +1169,7 @@ MODBUS_ENTITY_DESCRIPTIONS: list[ModbusRegisterSet] = [
     _MODBUS_SETTINGS_COOLING_CURVE_2,
     _MODBUS_SETTINGS_HOT_WATER,
     _MODBUS_SETTINGS_NETWORK,
+    _MODBUS_SETTINGS_SURPLUS,
     _MODBUS_TELEMETRY_GENERAL,
     _MODBUS_TELEMETRY_TARGET_VALUES,
     _MODBUS_TELEMETRY_TEMPERATURE_SENSORS,

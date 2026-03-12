@@ -289,6 +289,9 @@
       },
       "815": {
         "name": "§14a EnWG Anforderung"
+      },
+      "x2400": {
+        "name": "Überschussregelung einschalten"
       }
     },
     "number": {
@@ -366,6 +369,9 @@
       },
       "813": {
         "name": "SG-Ready Kühltemperatur senken um"
+      },
+      "x2401": {
+        "name": "Verfügbarer Überschuss in Watt"
       }
     },
     "select": {

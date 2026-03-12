@@ -58,7 +58,7 @@
     'last_changed': <ANY>,
     'last_reported': <ANY>,
     'last_updated': <ANY>,
-    'state': '0',
+    'state': '1234',
   })
 # ---
 # name: test_setup_number_modbus_tcp[mock_modbus_tcp_client0][number.test_entry_xtherma_modbus_config_cooling_curve_1_constant_cooling_temperature-entry]

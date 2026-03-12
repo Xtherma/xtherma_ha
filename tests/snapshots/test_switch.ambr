@@ -401,7 +401,7 @@
     'last_changed': <ANY>,
     'last_reported': <ANY>,
     'last_updated': <ANY>,
-    'state': 'off',
+    'state': 'on',
   })
 # ---
 # name: test_setup_switch_rest_api[mock_rest_api_client0][switch.test_entry_xtherma_config_cooling_curve_1_active-entry]

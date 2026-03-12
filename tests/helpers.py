@@ -127,6 +127,8 @@ def provide_modbus_data(
     # The rest data does not define these values
     set_modbus_register(regs_list, "in_total", 0)
     set_modbus_register(regs_list, "out_total", 0)
+    set_modbus_register(regs_list, "x2400", 1)
+    set_modbus_register(regs_list, "x2401", 1234)
 
     return param
 
